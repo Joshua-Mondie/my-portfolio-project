@@ -72,7 +72,13 @@ export const Banner = () => {
 										designs to life and ensuring seamless user experiences.
 									</p>
 									<button onClick={() => console.log("connect")}>
-										Let's Connect on LinkedIn <ArrowRightCircle size={25} />
+										Let's Connect on LinkedIn
+										<a
+											href="https://www.linkedin.com/in/joshua-daniel-363889248"
+											target="_blank"
+										>
+											<ArrowRightCircle size={25} />
+										</a>
 									</button>
 								</div>
 							)}
