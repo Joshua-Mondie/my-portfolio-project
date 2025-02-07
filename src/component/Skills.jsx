@@ -1,105 +1,104 @@
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css"
-import { Container,Col,Row } from "react-bootstrap";
-import meter1 from "../assets/images/meter1.svg"
-import meter2 from "../assets/images/meter2.svg"
-import meter3 from "../assets/images/meter3.svg"
-import colorSharp from "../assets/images/color-sharp.png"
+/** @format */
 
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+import { Container, Col, Row } from "react-bootstrap";
+// import typescript from "../assets/images/typescript.svg";
+// import meter2 from "../assets/images/meter2.svg";
+// import meter3 from "../assets/images/meter3.svg";
+import colorSharp from "../assets/images/color-sharp.png";
+import {
+	SiTypescript,
+	SiTailwindcss,
+	SiBootstrap,
+	SiHtml5,
+	SiCss3,
+	SiReact,
+} from "react-icons/si";
 
 const Skills = () => {
+	const responsive = {
+		superLargeDesktop: {
+			breakpoint: { max: 4000, min: 3000 },
+			items: 5,
+		},
+		desktop: {
+			breakpoint: { max: 3000, min: 1024 },
+			items: 3,
+			//   slidesToSlide: 3
+		},
+		tablet: {
+			breakpoint: { max: 1024, min: 464 },
+			items: 2,
+			//   slidesToSlide: 2
+		},
+		mobile: {
+			breakpoint: { max: 464, min: 0 },
+			items: 1,
+			//   slidesToSlide: 1
+		},
+	};
 
- 
-    const responsive = {
+	return (
+		<section className="skill" id="skills">
+			<Container>
+				<Row className="">
+					<Col className="col-container ">
+						<div className="skill-bx ">
+							<h2>Skills</h2>
 
-        superLargeDesktop: {
-            
-            breakpoint: { max: 4000, min: 3000 },
-            items: 5
-        },
-        desktop: {
-          breakpoint: { max: 3000, min: 1024 },
-          items: 3,
-        //   slidesToSlide: 3
-        },
-        tablet: {
-          breakpoint: { max: 1024, min: 464 },
-          items: 2,
-        //   slidesToSlide: 2
-        },
-        mobile: {
-          breakpoint: { max: 464, min: 0 },
-          items: 1,
-        //   slidesToSlide: 1
-        }
-    };
+							<p>These are some skills I have acquired on this journey!😊</p>
 
-    return (
+							<Carousel
+								responsive={responsive}
+								infinite={true}
+								className="skill-slider"
+							>
+								<div className="item">
+									<SiTypescript size={80} color="rgb(0, 122, 204)" />
+									<h5>Typescript</h5>
+								</div>
 
-        
+								<div className="item">
+									<SiTailwindcss size={80} color="rgb(0, 216, 255)" />
 
-        
-            
-        <section className='skills' id='skills'>
+									<h5>Tailwindcss</h5>
+								</div>
 
-            <Container>
+								<div className="item">
+									<SiBootstrap size={80} color="rgb(170, 0, 255)" />
 
-                <Row>
+									<h5>Bootstrap</h5>
+								</div>
 
-                    <Col>
-                    
-                        <div className="skill-bx">
+								<div className="item">
+									<SiHtml5 size={80} color="orangered" />
 
-                            <h2>Skills</h2>
+									<h5>HTML/CSS</h5>
+								</div>
 
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor tempore nulla alias consequuntur fugit similique.</p>
+								<div className="item">
+									{/* <SiHtml5 size={70} color="orangered" /> */}
+									<SiReact size={80} color="rgb(0, 216, 255)" />
 
-                            <Carousel responsive={responsive} infinite={true} className='skill-slider'>
+									<h5>React</h5>
+								</div>
 
-                                <div className="item">
+								<div className="item">
+									{/* <SiHtml5 size={70} color="orangered" /> */}
+									<SiReact size={80} color="rgb(0, 216, 255)" />
 
-                                    <img src={meter1} alt="image" />    
+									<h5>React Native</h5>
+								</div>
+							</Carousel>
+						</div>
+					</Col>
+				</Row>
+			</Container>
 
-                                    <h5>Web Development</h5>
+			<img className="background-image-left" src={colorSharp} alt="" />
+		</section>
+	);
+};
 
-                                </div>
-
-                                <div className="item">
-
-                                    <img src={meter2} alt="image" />    
-
-                                    <h5>Web Design</h5>
-
-                                </div>
-
-                                <div className="item">
-
-                                    <img src={meter3} alt="image" />    
-
-                                    <h5>Content Development</h5>
-
-                                </div>
-
-                                <div className="item">
-
-                                    <img src={meter1} alt="image" />    
-
-                                    <h5>Writer</h5>
-
-                                </div>
-
-                            </Carousel> 
-                        </div>
-                    </Col>
-                </Row>
-            </Container>
-
-            <img className='background-image-left' src={colorSharp} alt="" />
-            
-        </section>
-               
-        
-    );
-}
- 
-export default Skills 
+export default Skills;
